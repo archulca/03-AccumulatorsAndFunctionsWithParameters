@@ -36,7 +36,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #
 #     d. Write a line of code that construct a RoseWindow object
 #        whose height is 100:  (Use the HOVER trick to figure it out)
-#            window = rg.RoseWindow(100)
+#            window = rg.RoseWindow(100,100)
 #
 #     e. Use the DOT trick to answer the following:
 #
