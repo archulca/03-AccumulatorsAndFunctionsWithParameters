@@ -179,8 +179,9 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -205,8 +206,29 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+    #Test 1:
+    expected = 9
+    answer = digits_in_power(3,4)
+    print('test 2 expected', expected)
+    print('       actual', answer)
+
+    #Test 2:
+    expected = 7
+    answer = digits_in_power(5,2)
+    print('test 2 expected', expected)
+    print('       actual', answer)
+
+    #Test 3:
+    expected = 7
+    answer = digits_in_power(4,5)
+    print('test 2 expected', expected)
+    print('       actual', answer)
+
 
 def digits_in_power(n, k):
+    number = n**k
+    return(sum_of_digits(number))
+
     """
     What comes in:  Two positive integers, n and k.
     What goes out:
