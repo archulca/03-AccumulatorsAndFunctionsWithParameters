@@ -17,7 +17,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              (300,500)
+#              top left corner
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
@@ -99,6 +99,7 @@ def example2():
     # ------------------------------------------------------------------
     point1 = rg.Point(100, 150)
     point2 = rg.Point(200, 50)
+
 
     # ------------------------------------------------------------------
     # A RoseGraphics object is not associated with a window,
