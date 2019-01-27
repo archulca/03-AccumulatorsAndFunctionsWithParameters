@@ -209,7 +209,7 @@ def run_test_digits_in_power():
     #Test 1:
     expected = 9
     answer = digits_in_power(3,4)
-    print('test 2 expected', expected)
+    print('test 1 expected', expected)
     print('       actual', answer)
 
     #Test 2:
@@ -221,7 +221,7 @@ def run_test_digits_in_power():
     #Test 3:
     expected = 7
     answer = digits_in_power(4,5)
-    print('test 2 expected', expected)
+    print('test 3 expected', expected)
     print('       actual', answer)
 
 
@@ -275,7 +275,7 @@ def run_test_fancy_sums_of_digits():
     #Test 1:
     expected = 1
     answer = fancy_sums_of_digits(10)
-    print('test 2 expected', expected)
+    print('test 1 expected', expected)
     print('       actual', answer)
 
     #Test 2:
@@ -287,7 +287,7 @@ def run_test_fancy_sums_of_digits():
     #Test 3:
     expected = 40639
     answer = fancy_sums_of_digits(4)
-    print('test 2 expected', expected)
+    print('test 3 expected', expected)
     print('       actual', answer)
 
 
