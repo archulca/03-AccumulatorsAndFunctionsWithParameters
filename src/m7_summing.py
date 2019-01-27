@@ -7,7 +7,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
          Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
-
+import math as m
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
@@ -30,12 +30,30 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
 
     #Test 1:
-    expected =
+    expected = -1.51948
     answer = sum_cosines(4)
     print('test 1 expected', expected)
     print('       actual', answer)
 
+    # Test 2:
+    expected = -1.2358
+    answer = sum_cosines(5)
+    print('test 2 expected', expected)
+    print('       actual', answer)
+
+    # Test 3:
+    expected = 0.1242
+    answer = sum_cosines(2)
+    print('test 3 expected', expected)
+    print('       actual', answer)
+
 def sum_cosines(n):
+    total = 0
+    for k in range(n):
+        total = total + m.cos(k+1)
+    return total
+
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
@@ -46,7 +64,7 @@ def sum_cosines(n):
         cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
