@@ -17,7 +17,7 @@ def main():
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -76,7 +76,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -88,8 +88,30 @@ def run_test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
+    #Test 1:
+    expected = 3.4142
+    answer = sum_square_roots(2)
+    print('test 1 expected', expected)
+    print('       actual', answer)
+
+    # Test 2:
+    expected = 8.6921
+    answer = sum_square_roots(4)
+    print('test 2 expected', expected)
+    print('       actual', answer)
+
+    # Test 3:
+    expected = 15.3185
+    answer = sum_square_roots(6)
+    print('test 2 expected', expected)
+    print('       actual', answer)
 
 def sum_square_roots(n):
+    total = 0
+    for k in range (n):
+        total = total + m.sqrt(2*(k+1))
+    return total
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the square roots of the integers
@@ -103,7 +125,7 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
