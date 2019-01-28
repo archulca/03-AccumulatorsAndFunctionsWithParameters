@@ -19,6 +19,7 @@ def main():
     draw_circles2()
     print_sequence3()
     draw_circles3()
+    print_cosines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -200,7 +201,7 @@ def print_cosines():
        68.9855097830147
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # DONE: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -215,7 +216,8 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
-
+    for k in range(0,101):
+        print(80*m.cos(k))
 
 def draw_cosines_and_sines():
     """
