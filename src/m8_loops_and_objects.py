@@ -14,8 +14,9 @@ import rosegraphics as rg
 import math as m
 def main():
     print_sequence1()
-    draw_circles1(rg.Point(200,200),10)
+    draw_circles1()
     print_sequence2()
+    draw_circles2()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -43,7 +44,7 @@ def print_sequence1():
     for k in range(21):
         print(10*k)
 
-def draw_circles1(point,radii):
+def draw_circles1():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -63,19 +64,11 @@ def draw_circles1(point,radii):
     print('--------------------------------------------------')
 
     window = rg.RoseWindow()
-    turtle = rg.SimpleTurtle()
-    turtle.pen = rg.Pen('black',2)
-    turtle.set_heading(0)
-    turtle.speed = 100
-    for k in range (1,22):
-        turtle.pen_up()
-        turtle.go_to(point)
-        turtle.right(90)
-        turtle.forward(radii*k)
-        turtle.left(90)
-        turtle.pen_down()
-        turtle.draw_circle(radii*k)
-        turtle.pen_up()
+    point = rg.Point(200,200)
+    for k in range (0,21):
+        circle = rg.Circle(point,10*k)
+        circle.attach_to(window)
+        window.render()
     window.close_on_mouse_click()
 
 
@@ -114,7 +107,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -122,6 +115,18 @@ def draw_circles2():
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow()
+    for k in range(5,40):
+        point = rg.Point(10*k,100)
+        circle = rg.Circle(point,10)
+        circle.fill_color = 'blue'
+        circle.attach_to(window)
+        window.render()
+    window.close_on_mouse_click()
+
+
+
 
 
 def print_sequence3():
