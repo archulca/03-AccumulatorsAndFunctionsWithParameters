@@ -20,6 +20,7 @@ def main():
     print_sequence3()
     draw_circles3()
     print_cosines()
+    draw_cosines_and_sines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -234,7 +235,7 @@ def draw_cosines_and_sines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # DONE: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -242,7 +243,13 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
-
+    window = rg.RoseWindow(400,400)
+    for k in range(0,101):
+        point = rg.Point(200+(80*m.cos(k)),200+(80*m.sin(k)))
+        circle = rg.Circle(point,10)
+        circle.attach_to(window)
+        window.render()
+    window.close_on_mouse_click()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
